@@ -1,0 +1,26 @@
+{
+  "overview": "A high-energy, conversion-focused rental property website for PSR Rental in Jodhpur. Designed to feel like a live rental platform — fast, dynamic, and built to turn visitors into instant WhatsApp and call inquiries.",
+  "features": [
+    "Animated hero with slideshow background and dual WhatsApp/Call CTAs",
+    "Interactive property search with tabs for Rent Home, PG/Room, Office, Shop",
+    "Smart category cards with hover animations",
+    "App-like live property feed with 'Just Added' badges",
+    "Animated trust counters (269+ clients, 1000+ properties)",
+    "Why Choose Us section with dynamic icons",
+    "4-step animated process flow",
+    "Auto-scrolling testimonials slider",
+    "Sticky floating WhatsApp and Call buttons",
+    "Mobile-first design with micro-interactions throughout"
+  ],
+  "category": "real-estate",
+  "tags": [
+    "real-estate",
+    "rental",
+    "jodhpur",
+    "property",
+    "whatsapp",
+    "conversion",
+    "landing-page"
+  ],
+  "last_updated": "2026-04-29T08:29:05.725Z"
+}

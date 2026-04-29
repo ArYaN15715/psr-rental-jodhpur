@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: "Inter";
+    --font-body: "Inter";
+    --font-mono: "JetBrains Mono";
+    --radius: 0.875rem;
+
+    /* PSR Brand: Deep Blue #0B3C5D → oklch(0.30 0.09 230) */
+    /* PSR Brand: Bright Accent #1DA1F2 → oklch(0.68 0.17 215) */
+
+    --background: 0.98 0.005 240;
+    --foreground: 0.15 0.06 230;
+
+    --card: 1.0 0 0;
+    --card-foreground: 0.15 0.06 230;
+
+    --popover: 1.0 0 0;
+    --popover-foreground: 0.15 0.06 230;
+
+    /* Deep Blue primary */
+    --primary: 0.3 0.09 230;
+    --primary-foreground: 1.0 0 0;
+
+    --secondary: 0.94 0.01 230;
+    --secondary-foreground: 0.3 0.09 230;
+
+    --muted: 0.96 0.005 230;
+    --muted-foreground: 0.5 0.04 230;
+
+    /* Bright Blue accent */
+    --accent: 0.68 0.17 215;
+    --accent-foreground: 1.0 0 0;
+
+    --destructive: 0.58 0.19 15;
+    --destructive-foreground: 0.98 0 0;
+
+    --border: 0.9 0.01 230;
+    --input: 0.93 0.01 230;
+    --ring: 0.68 0.17 215;
+
+    --chart-1: 0.68 0.17 215;
+    --chart-2: 0.3 0.09 230;
+    --chart-3: 0.65 0.18 40;
+    --chart-4: 0.75 0.15 90;
+    --chart-5: 0.58 0.19 15;
+
+    --sidebar: 0.3 0.09 230;
+    --sidebar-foreground: 1.0 0 0;
+    --sidebar-primary: 0.68 0.17 215;
+    --sidebar-primary-foreground: 1.0 0 0;
+    --sidebar-accent: 0.94 0.01 230;
+    --sidebar-accent-foreground: 0.3 0.09 230;
+    --sidebar-border: 0.4 0.07 230;
+    --sidebar-ring: 0.68 0.17 215;
+
+    /* PSR brand raw hex for non-tailwind usage */
+    --psr-blue: #0b3c5d;
+    --psr-accent: #1da1f2;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  /* Transition utilities */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .transition-fast {
+    transition: all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* CTA pulse animation */
+  .cta-pulse {
+    animation: pulse-glow 2.2s ease-in-out infinite;
+  }
+
+  /* Card lift hover effect */
+  .card-lift {
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s
+      cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(11, 60, 93, 0.18);
+  }
+
+  /* Gradient utilities */
+  .gradient-hero {
+    background: linear-gradient(
+      160deg,
+      #0b3c5d 0%,
+      #0d4d7a 40%,
+      #0e5a8a 70%,
+      #1565a0 100%
+    );
+  }
+
+  .gradient-primary {
+    background: linear-gradient(135deg, #0b3c5d 0%, #1565a0 100%);
+  }
+
+  .gradient-accent {
+    background: linear-gradient(135deg, #1da1f2 0%, #0d85d0 100%);
+  }
+
+  .gradient-cta {
+    background: linear-gradient(160deg, #0b3c5d 0%, #0d3f60 60%, #1a1f2e 100%);
+  }
+
+  /* Text gradient */
+  .text-gradient-accent {
+    background: linear-gradient(135deg, #1da1f2, #5bc8ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* WhatsApp green */
+  .bg-whatsapp {
+    background-color: #25d366;
+  }
+
+  .bg-whatsapp:hover {
+    background-color: #1db854;
+  }
+
+  /* Shimmer loading */
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      oklch(var(--muted)) 0%,
+      oklch(var(--muted) / 0.6) 50%,
+      oklch(var(--muted)) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.6s ease-in-out infinite;
+  }
+
+  /* Hover glow */
+  .hover-glow:hover {
+    box-shadow: 0 0 0 3px rgba(29, 161, 242, 0.25);
+  }
+}
